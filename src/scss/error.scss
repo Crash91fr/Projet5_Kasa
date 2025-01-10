@@ -1,0 +1,24 @@
+.error {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 200px;
+        color: #FF6060;
+        margin: 0px auto;
+    }
+
+        h2 {
+            font-size: 30px;
+            color: #FF6060;
+            margin-bottom: 100px;
+        }
+
+            a {
+                font-size: 18px;
+                text-decoration: underline;
+                padding-bottom: 120px;
+                color: black;
+            }
+}
