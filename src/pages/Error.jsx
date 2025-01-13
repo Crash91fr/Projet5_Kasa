@@ -1,3 +1,5 @@
+{/*page d'erreur 404*/}
+
 import { Link } from 'react-router-dom'
 import '../scss/error.scss'
 

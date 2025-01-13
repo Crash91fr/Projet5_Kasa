@@ -1,3 +1,5 @@
+{/*Composant header et footer*/}
+
 import { Outlet, Link } from 'react-router-dom'
 
 import '../scss/layout.scss'

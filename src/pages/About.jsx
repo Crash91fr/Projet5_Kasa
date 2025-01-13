@@ -1,9 +1,7 @@
-{/*imports missing*/}
+{/*page A propos*/}
 
 import Banner from '../components/Banner'
 import AboutBanner from '../assets/images/background-img-about.webp'
-
-import '../scss/about.scss'
 
 const About = () => {
     return (

@@ -1,3 +1,5 @@
+{/*Composant banniere*/}
+
 import '../scss/banner.scss'
 
 import PropTypes from 'prop-types'
