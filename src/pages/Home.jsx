@@ -1,9 +1,8 @@
-{/*imports missing*/}
+{/*page Accueil*/}
+
 import Card from '../components/Card'
 import Banner from '../components/Banner'
 import HomeBanner from '../assets/images/background-img-home.webp'
-
-import '../scss/home.scss'
 
 const Home = () => {
     return (
