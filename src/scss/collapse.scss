@@ -1,0 +1,37 @@
+.collapse-bar {
+    cursor: pointer;
+    overflow: hidden;
+    margin: 40px 80px;
+  }
+  
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 15px;
+    background-color: #FF6060;
+    color: white;
+    height: 52px;
+    border-radius: 10px 5px;
+    font-size: 1.25em;
+  }
+  
+  .collapse-parent {
+    overflow: hidden;
+    transition: height 0.4s ease-out;
+  }
+  
+  .collapse-content {
+    overflow: hidden;
+    background-color: #F6F6F673;
+    padding: 10px;
+  }
+  
+  .rotate-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  span { /*pour effet de rotation du chevron à la fermeture du collapsible*/
+    transition: transform 0.3s ease;  
+  }
