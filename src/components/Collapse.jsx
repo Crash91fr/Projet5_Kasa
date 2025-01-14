@@ -1,6 +1,6 @@
 {/*Composant menu déroulant*/}
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types'
@@ -9,11 +9,19 @@ import '../scss/collapse.scss'
 
 const Collapse = ({label, children}) => {
     const [open, setOpen] = useState(false)
+    const [contentHeight, setContentHeight] = useState(0)
     const contentRef = useRef(null)
     
     const toggle = () => {
         setOpen(!open)
     }
+
+    useEffect(() => {
+        // Only calculate height if the contentRef is available
+        if (contentRef.current) {
+          setContentHeight(contentRef.current.scrollHeight)
+        }
+      }, [open]) // Recalculate the height when the component opens/closes
 
     return (
         <div className="collapse-bar">    
@@ -27,9 +35,9 @@ const Collapse = ({label, children}) => {
             <div 
                 className="collapse-parent"
                 ref={contentRef}
-                style={open  && contentRef.current
-                    ? { height: Math.min(Math.max(contentRef.current.scrollHeight, 100), 500) + 'px' }
-                    : { height: '0px' }}
+                style={{
+                    height: open ? `${Math.min(contentHeight, 500)}px` : '0px', // Use state-driven height
+                  }}
                 >
                 <div className="collapse-content"> {open && children} </div>
             </div>
