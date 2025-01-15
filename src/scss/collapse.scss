@@ -33,5 +33,6 @@
   }
 
   span { /*pour effet de rotation du chevron à la fermeture du collapsible*/
-    transition: transform 0.3s ease;  
+    transition: transform 0.3s ease;
+    font-size: 1.5em;  
   }
