@@ -19,6 +19,7 @@
   .collapse-parent {
     overflow: hidden;
     transition: height 0.4s ease-out;
+    cursor: default;
   }
   
   .collapse-content {
