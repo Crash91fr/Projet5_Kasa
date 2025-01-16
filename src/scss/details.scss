@@ -1,0 +1,63 @@
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.title {
+    font-size: 2.25em;
+    font-weight: 500;
+    color:#FF6060;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    font-size: 1.125em;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+
+.tags {
+    display: flex;
+    column-gap: 10px;
+
+
+    .tag {
+        color: white;
+        background-color: #FF6060;
+        border-radius: 25px;
+        font-size: 0.875em;
+        padding: 5px 20px 3px 20px;
+        height: 25px;
+        font-weight: 700;
+        min-width: 115px;
+        text-align: center;
+    }
+}
+
+.host-info {
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+        color: #FF6060;
+        font-size: 1.125em;
+        text-align: right;
+    }
+
+    img {
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+    }
+
+}
+
+.ratings {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 30px;
+}

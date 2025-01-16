@@ -1,10 +1,12 @@
 {/*page de présentation d'un logement*/}
 
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 
+import Details from '../components/Details'
+import Collapse from '../components/Collapse'
 import Slideshow from '../components/Slideshow'
 import logements from '../logements.json'
-import Collapse from '../components/Collapse'
+
 
 import '../scss/logement.scss'
 
@@ -14,14 +16,15 @@ const Logement = () => {
     const logement = logements.find((logement) => logement.id === id)
 
     if (!logement) {
-        return null
+        return <Navigate to="/error" replace /> /*renvoi vers la page d'erreur si l'id est invalide*/
     }
 
     return (
         <div className="logement-details">
                 < Slideshow images={logement.pictures}
                 />           
-                {/*< Details logement={logement} />*/}
+                < Details logement={logement} 
+                />
             <div className="collapse-logement">
                 < Collapse label="Description">
                     {logement.description}
