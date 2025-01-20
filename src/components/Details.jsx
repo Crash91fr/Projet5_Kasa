@@ -16,7 +16,7 @@ const Details = ({logement}) => {
     return (
         <div className="details">
             <div className="details-left">
-                <h2 className="title">{logement.title}</h2>
+                <h1 className="title">{logement.title}</h1>
                 <h3 className="subtitle">{logement.location}</h3>
                     <div className="tags">
                         {logement.tags.map((tag, index) => (

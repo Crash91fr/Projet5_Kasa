@@ -1,13 +1,31 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 40px 120px;
     align-items: center;
 
+    @include breakpoint(sm, both) {
+        padding: 20px 20px;
+
+        img {
+            width: 135px;
+            height: 42px;
+        }
+    }
+
     nav {
         display: flex;
         column-gap: 57px;
-        font-size: 24px;
+        font-size: 1.5em;
+
+        @include breakpoint(sm, both) {
+            column-gap: 20px;
+            font-size: 0.875em;
+            text-transform: uppercase;
+        }
     }
 
         a {
@@ -26,9 +44,18 @@ footer {
     background-color: black;
     padding-top: 60px;
     
-    p {
-        font-size: 24px;
+    @include breakpoint(sm, both) {
+        padding: 50px 0px 40px 0px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
         color: white;
+
+        @include breakpoint(sm, both) {
+            font-size: 0.75em;
+        }
     }
 }
 

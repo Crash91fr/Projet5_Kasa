@@ -1,7 +1,14 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
 .collapse-bar {
     cursor: pointer;
     overflow: hidden;
     margin: 40px 80px;
+
+    @include breakpoint(sm, both) {
+      margin: 30px 0px;
+      }
   }
   
   .collapse-header {
@@ -14,6 +21,11 @@
     height: 52px;
     border-radius: 10px;
     font-size: 1.25em;
+
+    @include breakpoint(sm, both) {
+      height: 30px;
+      font-size: 1em;
+      }
   }
   
   .collapse-parent {

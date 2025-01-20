@@ -1,24 +1,41 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
 .error {
     display: flex;
     text-align: center;
     flex-direction: column;
 
     h2 {
-        font-size: 200px;
+        font-size: 12.5em;
         color: #FF6060;
         margin: 0px auto;
+
+        @include breakpoint(sm, both) {
+            font-size: 6em;
+            margin: 40px auto auto;
+        }
     }
 
         h3 {
-            font-size: 30px;
+            font-size: 1.875em;
             color: #FF6060;
             margin-bottom: 100px;
+            font-weight: 500;
+
+            @include breakpoint(sm, both) {
+                font-size: 1.125em;
+            }
         }
 
             a {
-                font-size: 18px;
+                font-size: 1.125em;
                 text-decoration: underline;
                 padding-bottom: 80px;
                 color: black;
+
+                @include breakpoint(sm, both) {
+                    font-size: 0.875em;
+                }
             }
 }

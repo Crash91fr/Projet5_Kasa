@@ -27,7 +27,7 @@ const Layout = () => {
         {/*Footer Section*/}
       <footer>
         <img src={logoFooter} alt="logo Kasa" className="logo-footer" />
-        <p>© 2025 Kasa. All rights reserved.</p>
+        <h3>© 2025 Kasa. All rights reserved.</h3>
       </footer> 
     </div>
   )

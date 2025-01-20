@@ -11,7 +11,7 @@ const Card = () => {
                 {logements.map((logement) => (
                     <div key={logement.id} className="card">
                         <Link to={`/logement/${logement.id}`}>
-                        <img src={logement.cover} alt={logement.title} />
+                        <img src={logement.cover} alt="photo du logement" />
                         <h2>{logement.title}</h2>
                         </Link>
                     </div>

@@ -1,3 +1,6 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
 .banner {
     position: relative;
     display: flex;
@@ -8,6 +11,10 @@
     border-radius: 25px;
     box-shadow: 0px 4px 4px 0px #00000040;
     overflow: hidden;
+
+        @include breakpoint(sm, both) {
+            height: 110px;
+        }
 
     img {
         object-fit: cover;
@@ -30,6 +37,13 @@
         z-index: 1;
         font-size: 2.5em;
         color: white;
+        text-align: center;
+
+        @include breakpoint(sm, both) {
+            font-size: 1.5em;
+            text-align: start;
+            padding: 0px 20px; 
+        }
     }
 
 }
