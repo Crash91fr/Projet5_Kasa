@@ -1,7 +1,27 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
 .details {
     display: flex;
     justify-content: space-between;
     align-items: center;  
+
+    @include breakpoint(sm, both) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+            .details-right {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;              
+            }
+
+            .details-left {
+                width: 100%;              
+            }
+        }
 }
 
 .title {
@@ -9,19 +29,28 @@
     font-weight: 500;
     color:#FF6060;
     margin-bottom: 0px;
+
+    @include breakpoint(sm, both) {
+        font-size: 1.125em;
+    }
 }
 
 .subtitle {
     font-size: 1.125em;
     font-weight: 500;
     margin-top: 0px;
+
+    @include breakpoint(sm, both) {
+        font-size: 0.875em;
+    }
+
 }
 
 
 .tags {
     display: flex;
-    column-gap: 10px;
-
+    flex-wrap: wrap;
+    gap: 10px;
 
     .tag {
         color: white;
@@ -33,6 +62,13 @@
         font-weight: 700;
         min-width: 115px;
         text-align: center;
+
+        @include breakpoint(sm, both) {
+            min-width: 84px;
+            height: 18px;
+            font-size: 0.75em;
+            padding-bottom: 6px;
+            }
     }
 }
 

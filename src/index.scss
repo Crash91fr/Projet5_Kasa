@@ -23,5 +23,6 @@
 
         @include breakpoint(sm, both){
             padding: 0px 20px;
+            margin-bottom: 30px;
         }
   }

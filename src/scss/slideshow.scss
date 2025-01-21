@@ -1,8 +1,16 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
 .slideshow {
     position: relative;
     width: 100%;
     height: 415px;
     overflow: hidden;
+
+    @include breakpoint(sm, both) {
+    height: 255px;
+    }
+
   }
   
 .slide {
@@ -33,6 +41,11 @@ button {
     z-index: 4;
     background: none;
     border: none;
+
+    @include breakpoint(sm, both) {
+      font-size: 2em;
+      }
+
   }
 
 /* Positionne le bouton previous à gauche */

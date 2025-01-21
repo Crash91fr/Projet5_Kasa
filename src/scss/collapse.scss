@@ -24,7 +24,7 @@
 
     @include breakpoint(sm, both) {
       height: 30px;
-      font-size: 1em;
+      font-size: 0.875em;
       }
   }
   
@@ -32,7 +32,11 @@
     overflow: hidden;
     transition: height 0.4s ease-out;
     cursor: default;
+
+    @include breakpoint(sm, both) {
+      font-size: 0.875em;
   }
+}
   
   .collapse-content {
     overflow: hidden;
