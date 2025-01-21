@@ -10,7 +10,7 @@ import logoFooter from '../assets/images/logo-kasa-white.png'
 const Layout = () => {
   return (
     <div>
-        {/*Header Section*/}
+
       <header>
         <img src={logoHeader} alt="logo Kasa" className="logo-header" />
         <nav>
@@ -19,12 +19,10 @@ const Layout = () => {
         </nav>
         </header>
 
-        {/*Main Section où les pages Home, About etc apparaitront*/}
         <main>
             <Outlet />
         </main>
       
-        {/*Footer Section*/}
       <footer>
         <img src={logoFooter} alt="logo Kasa" className="logo-footer" />
         <h3>© 2025 Kasa.<br className="line-break"></br> All rights reserved.</h3>

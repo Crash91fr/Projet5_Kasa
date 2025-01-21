@@ -12,11 +12,11 @@ import '../scss/logement.scss'
 
 const Logement = () => {
 
-    const { id } = useParams() /*récupère l'id dans l'URL*/
+    const { id } = useParams() 
     const logement = logements.find((logement) => logement.id === id)
 
     if (!logement) {
-        return <Navigate to="/error" replace /> /*renvoi vers la page d'erreur si l'id est invalide*/
+        return <Navigate to="/error" replace /> 
     }
 
     return (
