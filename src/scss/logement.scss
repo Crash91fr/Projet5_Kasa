@@ -1,6 +1,4 @@
-@import './breakpoints.scss';
-@import './mixin.scss';
-
+@use './mixin.scss' as *;
 
 .collapse-logement {
     display: flex;

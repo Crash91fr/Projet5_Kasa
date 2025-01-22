@@ -1,5 +1,4 @@
-@import './scss/breakpoints.scss';
-@import './scss/mixin.scss';
+@use './scss/mixin.scss' as *;
 
 :root {
     font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

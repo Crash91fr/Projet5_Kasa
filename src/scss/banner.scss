@@ -1,5 +1,4 @@
-@import './breakpoints.scss';
-@import './mixin.scss';
+@use './mixin.scss' as *;
 
 .banner {
     position: relative;

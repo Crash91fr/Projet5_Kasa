@@ -1,9 +1,12 @@
+@use "sass:map";
+@use './breakpoints' as bp;
+
 @mixin breakpoint($breakpoint, $direction: min) {
 
-    @if map-has-key($breakpoints, $breakpoint) { 
-        $breakpoint-values: map-get($breakpoints, $breakpoint);
-        $breakpoint-min: map-get($breakpoint-values, min);
-        $breakpoint-max: map-get($breakpoint-values, max);
+    @if map.has-key(bp.$breakpoints, $breakpoint) {  
+        $breakpoint-values: map.get(bp.$breakpoints, $breakpoint);  
+        $breakpoint-min: map.get($breakpoint-values, min);
+        $breakpoint-max: map.get($breakpoint-values, max);
 
         @if $direction == min {
             @media (min-width: $breakpoint-min) {
