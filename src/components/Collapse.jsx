@@ -17,11 +17,11 @@ const Collapse = ({label, children}) => {
     }
 
     useEffect(() => {
-        // Only calculate height if the contentRef is available
+        
         if (contentRef.current) {
           setContentHeight(contentRef.current.scrollHeight)
         }
-      }, [open]) // Recalculate the height when the component opens/closes
+      }, [open]) 
 
     return (
         <div className="collapse-bar">    
@@ -36,7 +36,7 @@ const Collapse = ({label, children}) => {
                 className="collapse-parent"
                 ref={contentRef}
                 style={{
-                    height: open ? `${Math.min(contentHeight, 500)}px` : '0px', // Use state-driven height
+                    height: open ? `${Math.min(contentHeight, 500)}px` : '0px', 
                   }}
                 >
                 <div className="collapse-content"> {open && children} </div>
