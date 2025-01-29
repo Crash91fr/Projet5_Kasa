@@ -1,6 +1,6 @@
 {/*Composant header et footer*/}
 
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, NavLink } from 'react-router-dom'
 
 import '../scss/layout.scss'
 
@@ -14,8 +14,8 @@ const Layout = () => {
       <header>
         <img src={logoHeader} alt="logo Kasa" className="logo-header" />
         <nav>
-            <Link to="/">Accueil</Link>
-            <Link to="/about">A Propos</Link>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Accueil</NavLink>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>A Propos</NavLink>
         </nav>
         </header>
 
