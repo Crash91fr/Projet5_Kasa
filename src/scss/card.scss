@@ -29,14 +29,6 @@
     border-radius: 10px;
     overflow: hidden;
     
-<<<<<<< HEAD
-=======
-    a {
-        position: inherit;
-        z-index: 1;
-    }
-
->>>>>>> 3a1b2bbd9a15f03bbb28d935ea3e0a55a6bac986
     &::after {
         content: '';
         position: absolute;
@@ -45,12 +37,8 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(10, 10, 10, 0), rgba(4, 4, 4, 0.205), rgba(0, 0, 0, 0.5));
-<<<<<<< HEAD
         z-index: 1;
         pointer-events: none;
-=======
-        z-index: 0;
->>>>>>> 3a1b2bbd9a15f03bbb28d935ea3e0a55a6bac986
     }
       
         @include breakpoint(sm, both) {
